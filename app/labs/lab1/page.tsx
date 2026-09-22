@@ -1,5 +1,7 @@
 import Forms from "./forms/Forms";
 import HeadingTags from "./HeadingTags";
+import HighlightedBoxLab from "./HighlightedBox";
+import HighlightedParagraphLab from "./HighlightedParagraph";
 import Images from "./Images";
 import ListTags from "./ListTags";
 import ParagraphTag from "./ParagraphTag";
@@ -16,6 +18,8 @@ export default function Lab1() {
       <Tables />
       <Images />
       <Forms />
+      <HighlightedParagraphLab />
+      <HighlightedBoxLab />
     </div>
   );
 }
