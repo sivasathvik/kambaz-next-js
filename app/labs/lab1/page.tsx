@@ -1,5 +1,9 @@
+import Forms from "./forms/Forms";
 import HeadingTags from "./HeadingTags";
+import Images from "./Images";
+import ListTags from "./ListTags";
 import ParagraphTag from "./ParagraphTag";
+import Tables from "./Tables";
 export default function Lab1() {
   return (
     <div id="wd-lab1">
@@ -8,6 +12,10 @@ export default function Lab1() {
       <HeadingTags />
       <ParagraphTag />
       {/* do the next exercise here */}
+      <ListTags />
+      <Tables />
+      <Images />
+      <Forms />
     </div>
   );
 }
