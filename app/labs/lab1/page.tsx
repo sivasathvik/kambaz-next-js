@@ -1,3 +1,4 @@
+import AnchorTag from "./AnchorTag";
 import Forms from "./forms/Forms";
 import HeadingTags from "./HeadingTags";
 import HighlightedBoxLab from "./HighlightedBox";
@@ -20,6 +21,7 @@ export default function Lab1() {
       <Forms />
       <HighlightedParagraphLab />
       <HighlightedBoxLab />
+      <AnchorTag />
     </div>
   );
 }
