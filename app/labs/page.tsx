@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Labs() {
   return (
     <div id="wd-labs">
-        <h2>Paturi Siva Sathvik</h2>
+        <h2>Siva Sathvik Paturi</h2>
         <Link href= "https://github.com/sivasathvik/kambaz-next-js" id= "wd-github">
           Github
         </Link>
