@@ -1,6 +1,13 @@
 import "./index.css";
 import ForegroundColors from "./ForegroundColors";
 import BackgroundColors from "./BackgroundColors";
+import Borders from "./Borders";
+import Padding from "./Padding";
+import Margins from "./Margins";
+import BoxModel from "./BoxModel";
+import Corners from "./Corners";
+import Dimensions from "./Dimensions";
+import Display from "./Display";
 
 export default function Lab2() {
   return (
@@ -15,6 +22,18 @@ export default function Lab2() {
         </p>
         <ForegroundColors />
         <BackgroundColors />
+        <Borders />
+        <Padding />
+
+        <Margins />
+
+        <BoxModel />
+
+        <Corners />
+
+        <Dimensions />
+
+        <Display />
       </div>
 
       <div id="wd-css-id-selectors">
