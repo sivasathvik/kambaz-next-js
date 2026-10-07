@@ -27,6 +27,9 @@ export default function Lab2() {
           Although it&apos;s very convenient it is considered bad practice and
           you should avoid using the style attribute
         </p>
+        <p>
+          <a href="/labs/lab2/tailwind">Open Tailwind CSS lab →</a>
+        </p>
         <ForegroundColors />
         <BackgroundColors />
         <Borders />
@@ -54,15 +57,13 @@ export default function Lab2() {
         <br />
         <br />
 
-        
-
         <Flex />
         <br />
         <br />
         <br />
 
         <MediaQueriesDemo />
-        
+
         <br />
         <br />
         <br />
