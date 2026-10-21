@@ -31,6 +31,11 @@ import Classes from "./Classes";
 import Styles from "./Styles";
 import ClientComponentDemo from "./ClientComponentDemo";
 import ServerComponentDemo from "./ServerComponentDemo";
+import Add from "./Add";
+import Square from "./Square";
+import Highlight from "./Highlight";
+import PathParameters from "./PathParameters";
+import TodoList from "./todos/TodoList";
 
 export default function Lab3() {
   console.log("Hello World!");
@@ -41,7 +46,7 @@ export default function Lab3() {
       <VariablesAndConstants />
       <VariableTypes />
       <BooleanVariables />
-      <IfElse /> 
+      <IfElse />
       <TernaryOperator />
       <ConditionalOutputIfElse />
       <ConditionalOutputInline />
@@ -71,6 +76,26 @@ export default function Lab3() {
       <Styles />
       <ClientComponentDemo />
       <ServerComponentDemo />
+      <Add a={3} b={4} />
+      <Add a={10} b={20} />
+      <Add a={7} b={8} />
+      <h4>Square of 4</h4>
+      <Square>4</Square>
+      <hr />
+      <p>
+        Square of 5 = <Square>5</Square>
+      </p>
+      <Highlight>Children can be any JSX</Highlight>
+      <h4>Square of 9</h4>
+      <Square>9</Square>
+      <hr />
+      <Highlight>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      </Highlight>
+      <br />
+      <Highlight>Components can wrap any text you pass between their tags.</Highlight>
+      <PathParameters />
+      <TodoList />
     </div>
   );
 }
