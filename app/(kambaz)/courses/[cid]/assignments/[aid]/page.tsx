@@ -1,11 +1,13 @@
 import Link from "next/link";
+import * as db from "../../../../database";
 
 export default async function AssignmentEditor({
   params,
 }: {
   params: Promise<{ cid: string; aid: string }>;
 }) {
-  const { cid } = await params;
+  const { cid, aid } = await params;
+  const assignment = db.assignments.find((a) => a._id === aid);
   return (
     <div id="wd-assignments-editor" className="max-w-3xl">
       <div className="mb-4">
@@ -14,9 +16,12 @@ export default async function AssignmentEditor({
         </label>
         <input
           id="wd-name"
-          defaultValue="A1 - ENV + HTML"
+          defaultValue={assignment?.title ?? ""}
           className="w-full rounded border border-neutral-300 px-3 py-2 text-sm"
         />
+        <p id="wd-assignment-id" className="mt-1 text-sm text-neutral-600">
+          Assignment id: {aid}
+        </p>
       </div>
       <div className="mb-4">
         <label
@@ -28,7 +33,7 @@ export default async function AssignmentEditor({
         <textarea
           id="wd-description"
           rows={5}
-          defaultValue="The assignment is available online Submit a link to the landing page of"
+          defaultValue={assignment?.description ?? ""}
           className="w-full rounded border border-neutral-300 px-3 py-2 text-sm"
         />
       </div>
@@ -38,7 +43,7 @@ export default async function AssignmentEditor({
         </label>
         <input
           id="wd-points"
-          defaultValue={100}
+          defaultValue={assignment?.points ?? 100}
           className="w-full rounded border border-neutral-300 px-3 py-2 text-sm"
         />
       </div>
@@ -140,7 +145,7 @@ export default async function AssignmentEditor({
             <input
               type="date"
               id="wd-due-date"
-              defaultValue="2024-05-13"
+              defaultValue={assignment?.due}
               className="w-full rounded border border-neutral-300 px-3 py-2 text-sm"
             />
           </div>
@@ -155,7 +160,7 @@ export default async function AssignmentEditor({
               <input
                 type="date"
                 id="wd-available-from"
-                defaultValue="2024-05-06"
+                defaultValue={assignment?.available}
                 className="w-full rounded border border-neutral-300 px-3 py-2 text-sm"
               />
             </div>
